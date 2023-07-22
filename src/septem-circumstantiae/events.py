@@ -9,7 +9,7 @@ LICENSE file in the root directory of this source tree.
 # https://alxfed.github.io/blog/posts/2019/02/22/Septem-Circumstantiae.html
 
 
-class HumanEvent:
+class Event:
     """"""
     who: str    = ''  # quis
     what: str   = ''  # quid
