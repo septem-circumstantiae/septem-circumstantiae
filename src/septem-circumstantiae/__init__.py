@@ -7,10 +7,8 @@ LICENSE file in the root directory of this source tree.
 """
 
 
-from .human_events import HumanEvent
-from .natural_events import NaturalEvent
+from .events import Event
 
 __all__ = [
-    'HumanEvent',
-    'NaturalEvent'
+    'Event'
 ]
