@@ -13,14 +13,17 @@ circumstantiae = [
 
 
 class Event:
-    """"""
+    """ Seven Circumstances, Copyright (c) Aristotle."""
     who: str            = ''  # quis. Who did it or who is reporting a natural event?
     what: str           = ''  # quid. What happened and was observed?
-    when: str           = ''  # quando. When did it happen or started happening? Does it still continue or can happen again?
+    when: str           = ''  # quando. When did it happen or started happening?
     where: str          = ''  # ubi. Where did it take place?
     why: str            = ''  # cur (for the sake of what?). Is there a cause or reason for the event?
     how: str            = ''  # quem ad modum (in what way?). How did it happen?
     by_what_means: str  = ''  # quibus adminiculis. How was it achieved? Were there any other factors involved?
+
+    """ The story about the event """
+    story: str = ''
 
     def __init__(self, **kwargs):
         for key,value in kwargs.items():
@@ -40,10 +43,13 @@ class Event:
             why - {self.why},
             how - {self.how},
             by what means - {self.by_what_means}
+            
+            story - {self.story}
             """
 
 
 if __name__ == '__main__':
+    # For testing
     keyword_arguments = {
         'who': 'I',
         'what': 'do',
@@ -53,6 +59,5 @@ if __name__ == '__main__':
         'how': 'in a most simple way',
         'by_what_means': 'manually'
     }
-    object = Event(**keyword_arguments)
-    print(object)
-    pass
+    some_event = Event(**keyword_arguments)
+    print(some_event)
