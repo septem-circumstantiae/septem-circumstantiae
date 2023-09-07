@@ -28,6 +28,21 @@ class Event:
     def __init__(self, **kwargs):
         for key,value in kwargs.items():
             setattr(self, key, value)
+        self.quis = self.who
+
+    @property
+    def quis(self):
+        self.quis = self.who
+        return self.quis
+
+    @quis.setter
+    def quis(self, who: str):
+        self.quis = who
+        self.who = who
+
+    @quis.deleter
+    def quis(self):
+        del self.quis
 
     def __call__(self, **kwargs):
         for key,value in kwargs.items():
